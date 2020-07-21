@@ -11,6 +11,7 @@ This project conains terraform code to build an EKS cluster equiped with the fol
 - external-dns: automatically creates and manages Route53 records based on ingress vhosts.
   - Following security recomendations the connection is made through an OIDC type authentication instead of using the node account.
 - cert-manager: automatically requests certificates from LetsEncrypt based on ingress vhosts.
+  - Please update cluster/cluster_issuer.yaml with your email address.
 
 All these controllers are installed through Helm. They can be enabled or disabled through variables located in the default.tf file which also can be used to adjust some parameters. Please read the file comments before doing anything.
 
